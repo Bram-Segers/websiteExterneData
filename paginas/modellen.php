@@ -36,6 +36,7 @@ if(isset($_POST['bestel'])) {
     <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
             rel="stylesheet">
+    <link href="opmaak.css" rel="stylesheet">
 </head>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
@@ -111,11 +112,11 @@ if(isset($_POST['bestel'])) {
                                             </div>
                                             <div class="mb-3">
                                                 <label class="form-label">Bouwjaar</label>
-                                                <input type="text" class="form-control" name="year" value="<?= htmlspecialchars($car['year'] ?? '') ?>" readonly>
+                                                <input type="text" class="form-control" name="year" value="<?= htmlspecialchars($car['type'] ?? '') ?>" readonly>
                                             </div>
                                             <div class="mb-3">
                                                 <label class="form-label">Type</label>
-                                                <input type="text" class="form-control" name="type" value="<?= htmlspecialchars($car['type'] ?? '') ?>" readonly>
+                                                <input type="text" class="form-control" name="type" value="<?= htmlspecialchars($car['year'] ?? '') ?>" readonly>
                                             </div>
                                             <div class="mb-3">
                                                 <label class="form-label">Bestel opmerking</label>
