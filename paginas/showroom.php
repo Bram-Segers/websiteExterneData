@@ -24,7 +24,10 @@
                     <a class="nav-link" href="../paginas/index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="bestellingen.php">Inventory</a>
+                    <a class="nav-link" href="bestellingen.php">Bestellingen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="showroom.php">Showroom</a>
                 </li>
             </ul>
         </div>
