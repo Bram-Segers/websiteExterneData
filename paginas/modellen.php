@@ -39,11 +39,13 @@ if(isset($_POST['bestel'])) {
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="../paginas/index.php">Home</a>
+                    <a class="nav-link active" aria-current="page" href="../paginas/index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="bestellingen.php">Inventory</a>
+                    <a class="nav-link" href="bestellingen.php">Bestellingen</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="showroom.php">Showroom</a>
             </ul>
         </div>
     </div>
