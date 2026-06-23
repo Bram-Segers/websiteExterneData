@@ -87,12 +87,6 @@
                 <td>
                     <form method="post" class="d-inline">
                         <input type="hidden" name="auto_id" value="<?= $row['auto_id'] ?>">
-                        <button type="submit" name="aankomst" class="btn btn-success btn-sm">
-                            Aangekomen
-                        </button>
-                    </form>
-                    <form method="post" class="d-inline">
-                        <input type="hidden" name="auto_id" value="<?= $row['auto_id'] ?>">
                         <button type="submit" name="delete" class="btn btn-danger btn-sm" onclick="return confirm('Weet je zeker dat je deze auto wilt verwijderen?')">
                             Verwijderen
                         </button>
