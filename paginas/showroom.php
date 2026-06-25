@@ -9,9 +9,7 @@
     <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
             rel="stylesheet">
-    <link
-            rel="stylesheet"
-            href="opmaak.css">
+    <link rel="stylesheet" href="../style/opmaak.css">
 </head>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
