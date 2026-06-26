@@ -32,19 +32,21 @@ class AutoRepository
     {
         // Schrijf een SQL-query om auto's in transit op te halen
         $sql = "
-    SELECT
+    SELECT date_format(auto.bestel_moment,'%e-%c-%Y %H:%i') AS bestel_moment,
         merk.merk_naam,
         model.model_naam,
         type.type_naam,
         jaar.jaar_naam,
-        auto.*
+        date_format(auto.aankomst_moment,'%e-%c-%Y %H:%i') AS aankomst_moment,
+        auto.auto_opmerking,
+        auto.auto_id
     FROM auto
     INNER JOIN model ON auto.model_id = model.model_id
     INNER JOIN merk ON model.merk_id = merk.merk_id
     INNER JOIN type ON auto.type_id = type.type_id
     INNER JOIN jaar ON auto.jaar_id = jaar.jaar_id
     WHERE auto.aankomst_moment IS NULL
-    ORDER BY auto.bestel_moment";
+    ORDER BY auto.aankomst_moment";
 
         // Bereid de SQL-statement voor
         $stmt = $this->db->prepare($sql);
@@ -60,12 +62,14 @@ class AutoRepository
     {
         // Schrijf een SQL-query om auto's in showroom op te halen
         $sql = "
-    SELECT
+    SELECT date_format(auto.bestel_moment,'%e-%c-%Y %H:%i') AS bestel_moment,
         merk.merk_naam,
         model.model_naam,
         type.type_naam,
         jaar.jaar_naam,
-        auto.*
+        date_format(auto.aankomst_moment,'%e-%c-%Y %H:%i') AS aankomst_moment,
+        auto.auto_opmerking,
+        auto.auto_id
     FROM auto
     INNER JOIN model ON auto.model_id = model.model_id
     INNER JOIN merk ON model.merk_id = merk.merk_id
