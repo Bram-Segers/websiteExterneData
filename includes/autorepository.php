@@ -46,7 +46,7 @@ class AutoRepository
     INNER JOIN type ON auto.type_id = type.type_id
     INNER JOIN jaar ON auto.jaar_id = jaar.jaar_id
     WHERE auto.aankomst_moment IS NULL
-    ORDER BY auto.aankomst_moment";
+    ORDER BY auto.bestel_moment";
 
         // Bereid de SQL-statement voor
         $stmt = $this->db->prepare($sql);
